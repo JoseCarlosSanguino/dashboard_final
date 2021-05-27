@@ -22,7 +22,7 @@ function login(username, password) {
     body: JSON.stringify({ username, password }),
   };
 
-  return fetch(`/users/authenticate`, requestOptions)
+  return fetch(`https://gdp-api-eu.telemedcare.com/doLogin`, requestOptions)
     .then(HandleResponse)
     .then((user) => {
       // store user details and jwt token in local storage to keep user logged in between page refreshes

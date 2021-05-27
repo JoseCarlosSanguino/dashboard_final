@@ -22,8 +22,8 @@ import { AuthenticationService } from "../../jwt/_services";
 const sidebarBackground = {
   backgroundImage: "url(" + img2 + ")",
   backgroundRepeat: "no-repeat",
-  backgroundSize : "190vh"
- 
+  backgroundSize: "190vh"
+
 };
 
 const Login = (props) => {
@@ -47,7 +47,7 @@ const Login = (props) => {
           <div id="loginform">
             <div className="logo">
               <span className="db">
-               {/*<img src={img1} alt="logo" />*/}
+                {/*<img src={img1} alt="logo" />*/}
               </span>
               <h5 className="font-medium mb-3">Sign In to Admin</h5>
               <div className="alert alert-success">
@@ -69,13 +69,18 @@ const Login = (props) => {
                     { username, password },
                     { setStatus, setSubmitting }
                   ) => {
-                    setStatus();
                     AuthenticationService.login(username, password).then(
-                      (user) => {
-                        const { from } = props.location.state || {
-                          from: { pathname: "/" },
-                        };
-                        props.history.push(from);
+                      (res) => {
+                        if (res.success === true) {
+                          const { from } = props.location.state || {
+                            from: { pathname: "/" },
+                          };
+                          props.history.push(from);
+                        } else {
+                          setSubmitting(false);
+                          setStatus(res.message);
+                        }
+                        console.log(res.success)
                       },
                       (error) => {
                         setSubmitting(false);
@@ -151,14 +156,15 @@ const Login = (props) => {
                         <Col xs="12">
                           <button
                             type="submit"
-                            className="btn btn-block btn-primary" 
+                            className="btn btn-block"
+                            style={{ backgroundColor: '#303984', color: 'white' }}
                             disabled={isSubmitting}
                           >
                             Login
                           </button>
                         </Col>
                       </Row>
-                     
+
                       {status && (
                         <div className={"alert alert-danger"}>{status}</div>
                       )}
