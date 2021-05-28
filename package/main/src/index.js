@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom";
+import './config/i18next-config';
 import Spinner from "./views/spinner/Spinner";
 import "./assets/scss/style.scss";
 import "./data";

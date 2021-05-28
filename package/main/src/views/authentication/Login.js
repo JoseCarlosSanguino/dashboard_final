@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   InputGroup,
   InputGroupAddon,
@@ -8,7 +9,7 @@ import {
   FormGroup,
   Row,
   Col,
-  UncontrolledTooltip,
+  // UncontrolledTooltip,
   Button,
 } from "reactstrap";
 //import img1 from "../../assets/images/logos/logo-icon.png";
@@ -23,17 +24,22 @@ const sidebarBackground = {
   backgroundImage: "url(" + img2 + ")",
   backgroundRepeat: "no-repeat",
   backgroundSize: "190vh"
-
 };
 
 const Login = (props) => {
+  const [t, i18n] = useTranslation();
   const handleClick = () => {
     var elem = document.getElementById("loginform");
     elem.style.transition = "all 2s ease-in-out";
     elem.style.display = "none";
     document.getElementById("recoverform").style.display = "block";
   };
-
+  const changeEng = () => {
+    i18n.changeLanguage('en')
+  }
+  const changeEs = () => {
+    i18n.changeLanguage('es')
+  }
   return (
     <div className="">
       {/*--------------------------------------------------------------------------------*/}
@@ -44,14 +50,28 @@ const Login = (props) => {
         style={sidebarBackground}
       >
         <div className="auth-box on-sidebar">
+          <button onClick={changeEng} style={{
+            border: 'none',
+            color: 'lightblue',
+            marginRight: '3px',
+            outline: 'none',
+            marginBottom: '20px'
+          }}>Ingles</button>
+          <button onClick={changeEs} style={{
+            border: 'none',
+            color: 'lightblue',
+            marginRight: '3px',
+            outline: 'none',
+            marginBottom: '20px'
+          }}>Español</button>
           <div id="loginform">
             <div className="logo">
               <span className="db">
                 {/*<img src={img1} alt="logo" />*/}
               </span>
-              <h5 className="font-medium mb-3">Sign In to Admin</h5>
+              <h5 className="font-medium mb-3">{t('login.textoInicio')}</h5>
               <div className="alert alert-success">
-                Username: test & Password: test
+                {t('login.user')}: test & {t('login.pass')}: test
               </div>
             </div>
             <Row>
@@ -160,7 +180,7 @@ const Login = (props) => {
                             style={{ backgroundColor: '#303984', color: 'white' }}
                             disabled={isSubmitting}
                           >
-                            Login
+                            {t('login.enter')}
                           </button>
                         </Col>
                       </Row>
