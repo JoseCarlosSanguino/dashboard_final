@@ -40,6 +40,14 @@ const Login = (props) => {
   const changeEs = () => {
     i18n.changeLanguage('es')
   }
+  const StyledButtonsLanguaje = {
+    border: 'none',
+    color: 'lightblue',
+    marginRight: '3px',
+    outline: 'none',
+    marginBottom: '20px',
+    backgroundColor: 'transparent',
+  }
   return (
     <div className="">
       {/*--------------------------------------------------------------------------------*/}
@@ -50,20 +58,10 @@ const Login = (props) => {
         style={sidebarBackground}
       >
         <div className="auth-box on-sidebar">
-          <button onClick={changeEng} style={{
-            border: 'none',
-            color: 'lightblue',
-            marginRight: '3px',
-            outline: 'none',
-            marginBottom: '20px'
-          }}>Ingles</button>
-          <button onClick={changeEs} style={{
-            border: 'none',
-            color: 'lightblue',
-            marginRight: '3px',
-            outline: 'none',
-            marginBottom: '20px'
-          }}>Español</button>
+          <div className="d-flex justify-content-end">
+            <button onClick={changeEng} style={StyledButtonsLanguaje}>🏴󠁧󠁢󠁥󠁮󠁧󠁿</button>
+            <button onClick={changeEs} style={StyledButtonsLanguaje}>🇪🇸</button>
+          </div>
           <div id="loginform">
             <div className="logo">
               <span className="db">
