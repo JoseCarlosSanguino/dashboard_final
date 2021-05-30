@@ -105,7 +105,7 @@ var ThemeRoutes = [
     child: [
       {
         path: "/dashboards/firstdashboard",
-        name: "Dashboard 1",
+        name: "Dashboard Users",
         mini: "B",
         icon: "mdi mdi-adjust",
         component: FirstDashboard,
