@@ -48,6 +48,7 @@ const Login = (props) => {
     outline: 'none',
     marginBottom: '20px',
     backgroundColor: 'transparent',
+    fontSize: "2rem"
   }
   return (
     <div className="">
@@ -59,10 +60,6 @@ const Login = (props) => {
         style={sidebarBackground}
       >
         <div className="auth-box on-sidebar">
-          <div className="d-flex justify-content-end">
-            <button onClick={changeEng} style={StylesButtonsLanguaje}>🏴󠁧󠁢󠁥󠁮󠁧󠁿</button>
-            <button onClick={changeEs} style={StylesButtonsLanguaje}>🇪🇸</button>
-          </div>
           <div id="loginform">
             <div className="logo">
               <span className="db">
@@ -192,6 +189,14 @@ const Login = (props) => {
                 />
               </Col>
             </Row>
+          </div>
+          <div className="d-flex justify-content-end" style={{
+            position: 'absolute',
+            right: '15px',
+            bottom: '10px'
+          }}>
+            <button onClick={changeEng} style={StylesButtonsLanguaje}>🏴󠁧󠁢󠁥󠁮󠁧󠁿</button>
+            <button onClick={changeEs} style={StylesButtonsLanguaje}>🇪🇸</button>
           </div>
           <div id="recoverform">
             <div className="logo">
