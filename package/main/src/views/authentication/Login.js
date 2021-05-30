@@ -20,6 +20,7 @@ import img2 from "../../assets/images/background/logo.png";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { AuthenticationService } from "../../jwt/_services";
+
 const sidebarBackground = {
   backgroundImage: "url(" + img2 + ")",
   backgroundRepeat: "no-repeat",
@@ -40,7 +41,7 @@ const Login = (props) => {
   const changeEs = () => {
     i18n.changeLanguage('es')
   }
-  const StyledButtonsLanguaje = {
+  const StylesButtonsLanguaje = {
     border: 'none',
     color: 'lightblue',
     marginRight: '3px',
@@ -59,8 +60,8 @@ const Login = (props) => {
       >
         <div className="auth-box on-sidebar">
           <div className="d-flex justify-content-end">
-            <button onClick={changeEng} style={StyledButtonsLanguaje}>🏴󠁧󠁢󠁥󠁮󠁧󠁿</button>
-            <button onClick={changeEs} style={StyledButtonsLanguaje}>🇪🇸</button>
+            <button onClick={changeEng} style={StylesButtonsLanguaje}>🏴󠁧󠁢󠁥󠁮󠁧󠁿</button>
+            <button onClick={changeEs} style={StylesButtonsLanguaje}>🇪🇸</button>
           </div>
           <div id="loginform">
             <div className="logo">

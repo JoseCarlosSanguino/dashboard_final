@@ -1,0 +1,8 @@
+{
+   "login": {
+            "textoInicio": "Sign In to Admin",
+            "user": "User",
+            "pass": "Password",
+            "enter": "Login"
+          }
+}

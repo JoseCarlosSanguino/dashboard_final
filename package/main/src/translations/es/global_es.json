@@ -1,0 +1,8 @@
+{
+  "login": {
+            "textoInicio": "Iniciar sesión como administrador",
+            "user": "Usuario",
+            "pass": "Contraseña",
+            "enter": "Ingresar"
+          }
+} 

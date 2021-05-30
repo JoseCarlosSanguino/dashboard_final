@@ -32,6 +32,7 @@
     "history": "4.7.2",
     "i18next": "^20.3.0",
     "i18next-browser-languagedetector": "^6.1.1",
+    "i18next-http-backend": "^1.2.6",
     "immutability-helper": "2.7.1",
     "joi": "^13.7.0",
     "joi-validation-strategy": "^0.3.3",
