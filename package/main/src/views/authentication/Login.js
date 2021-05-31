@@ -48,8 +48,8 @@ const Login = (props) => {
     outline: 'none',
     marginBottom: '20px',
     backgroundColor: 'transparent',
-    fontSize: "2rem"
   }
+
   return (
     <div className="">
       {/*--------------------------------------------------------------------------------*/}
@@ -195,8 +195,12 @@ const Login = (props) => {
             right: '15px',
             bottom: '10px'
           }}>
-            <button onClick={changeEng} style={StylesButtonsLanguaje}>🏴󠁧󠁢󠁥󠁮󠁧󠁿</button>
-            <button onClick={changeEs} style={StylesButtonsLanguaje}>🇪🇸</button>
+            <button onClick={changeEng} style={StylesButtonsLanguaje}>
+              <img style={{ objectFit: "cover", width: "40px" }} src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="icon-languaje" />
+            </button>
+            <button onClick={changeEs} style={StylesButtonsLanguaje}>
+              <img style={{ objectFit: "cover", width: "40px" }} src="https://www.ecured.cu/images/a/a7/Bandera-de-inglaterra-400x240.png" alt="icon-languaje" />
+            </button>
           </div>
           <div id="recoverform">
             <div className="logo">
